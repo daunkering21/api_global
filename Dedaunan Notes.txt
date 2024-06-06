@@ -1,0 +1,31 @@
+Dedaunan Notes
+
+Create tables with these names:
+
+// segments DepoWd Model
+1. depo_wd
+
+// segments HistoryTransaction Model
+2. history_transaksi
+
+// segments Referral
+3. referral_ae
+4. referral_fj
+5. referral_ko
+6. referral_pt
+7. referral_uz
+8. ref_aktif_ae
+9. ref_aktif_fj
+10. ref_aktif_ko
+11. ref_aktif_pt
+12. ref_aktif_uz
+13. ref_depo_ae
+14. ref_depo_fj
+15. ref_depo_ko
+16. ref_depo_pt
+17. ref_depo_uz
+
+// segments CashbackRollingan Model
+18. winlossbet_day
+19. listbonus
+20. listbonus_detail
