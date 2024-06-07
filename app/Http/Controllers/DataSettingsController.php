@@ -8,9 +8,6 @@ use Illuminate\Http\Request;
 
 class DataSettingsController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
         try {
