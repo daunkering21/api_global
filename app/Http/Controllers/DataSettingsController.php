@@ -40,11 +40,11 @@ class DataSettingsController extends Controller
                 'whatsapp' => 'required',
                 'telegram' => 'required',
                 'switch_sticky' => 'required',
-                'deposit' => 'required',
-                'klasemen' => 'required',
-                'peraturan' => 'required',
-                'livescore' => 'required',
-                'prediksi' => 'required',
+                'deposit' => 'nullable',
+                'klasemen' => 'nullable',
+                'peraturan' => 'nullable',
+                'livescore' => 'nullable',
+                'prediksi' => 'nullable',
                 'linkalternatif1' => 'required',
                 'linkalternatif2' => 'required',
                 'linkalternatif3' => 'required',
@@ -81,12 +81,12 @@ class DataSettingsController extends Controller
                 'linkdownload' => 'required',
                 'version_apk' => 'required',
             ]);
-            try {
-                DataSettings::create($validatedData);
-                return response()->json(['message' => 'success'], 200);
-            } catch (\Exception $e) {
-                return response()->json(['message' => 'not success', 'error' => $e->getMessage()], 500);
-            }
+        }
+        try {
+            DataSettings::create($validatedData);
+            return response()->json(['message' => 'success'], 200);
+        } catch (\Exception $e) {
+            return response()->json(['message' => 'not success, make sure that ', 'error' => $e->getMessage()], 500);
         }
     }
     public function update(Request $request, DataSettings $dataSettings, $id)

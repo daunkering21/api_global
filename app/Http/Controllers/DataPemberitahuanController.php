@@ -44,7 +44,7 @@ class DataPemberitahuanController extends Controller
             return response()->json(['message' => 'not success', 'error' => $e->getMessage()], 500);
         }
     }
-    public function destroy($id)
+    public function delete($id)
     {
         try {
             $dataBonusUrl = DataPemberitahuan::where('id', $id)->firstOrFail();

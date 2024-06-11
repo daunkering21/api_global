@@ -138,6 +138,7 @@ class DatabaseSeeder extends Seeder
             'Pertama',
             'Kedua',
             'Ketiga',
+            'Keempat',
         ];
         foreach ($indexKe as $sat){
             DataPemberitahuan::create([
